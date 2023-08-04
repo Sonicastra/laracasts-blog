@@ -26,6 +26,9 @@
 
         <x-base.footer/>
     </section>
+
+    <x-flash-message key="success"/>
+
 </main>
 @vite('resources/js/app.js')
 </body>
