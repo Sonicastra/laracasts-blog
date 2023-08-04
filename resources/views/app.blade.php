@@ -1,6 +1,65 @@
 <x-layouts.layout>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
-    <a href="/posts">Blogposts</a>
+    <section class="mt-20">
+        <div class="text-center">
+            <h1 class="text-4xl text-amber-800">Welcome to <span
+                        class="bg-clip-text text-transparent underline decoration-amber-500 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500">Funko Blog</span>
+                page.</h1>
+        </div>
+
+        <div class="mt-20">
+            <h2 class="text-2xl text-center lg:text-left text-amber-800 mb-5">Latest Blog</h2>
+            <article class="bg-amber-100 shadow-md rounded-md">
+                <div class="py-6 px-5 lg:flex">
+                    <div class="flex-1 lg:mr-8">
+                        {{-- TODO --}}
+                        <img src="/images/illustration-1.png" alt="Blog Post illustration" class="rounded-xl">
+                    </div>
+
+                    <div class="flex-1 flex flex-col justify-between">
+                        <header class="mt-8 lg:mt-0">
+                            <div class="space-x-2">
+                                <x-category-button :category="$latestPost->category"/>
+                            </div>
+
+                            <div class="mt-4">
+                                <h1 class="text-amber-800 font-semibold text-3xl">
+                                    <a href="/posts/{{ $latestPost->slug }}">
+                                        {{ $latestPost->title }}
+                                    </a>
+                                </h1>
+
+                                <span class="mt-2 block text-amber-500 text-xs">
+                        Published <time>{{ $latestPost->created_at->diffForHumans() }}</time>
+                    </span>
+                            </div>
+                        </header>
+
+                        <div class="text-sm mt-2">
+                            <p>
+                                {{ $latestPost->intro }}
+                            </p>
+                        </div>
+
+                        <footer class="flex justify-between items-center mt-8">
+                            <div class="flex items-center text-sm">
+                                <img src="/images/lary-avatar.svg" alt="Lary avatar">
+                                <div class="ml-3">
+                                    <h5 class="font-bold text-amber-900 italic">
+                                        <a href="posts/?author={{ $latestPost->author->username }}">{{ $latestPost->author->name }}
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div>
+                                <a href="/posts/{{ $latestPost->slug }}"
+                                   class="text-xs text-amber-700 font-semibold bg-amber-200 hover:bg-amber-300 rounded-full py-2 px-8"
+                                >Read More</a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
 </x-layouts.layout>

@@ -1,6 +1,8 @@
 <header class="max-w-xl mx-auto mt-20 text-center">
     <h1 class="text-4xl">
-        Latest <span class="text-amber-800">Laravel From Scratch</span> News
+        Latest <span
+                class="bg-clip-text text-transparent underline decoration-amber-500 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500">Funko Blog</span>
+        News
     </h1>
 
     <div class="sm:flex items-center sm:justify-between my-12">

@@ -11,6 +11,10 @@
     <link href="https://fonts.bunny.net/css?family=figtree:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
     <link href="https://fonts.bunny.net/css?family=georama:200,200i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+
     @vite('resources/css/app.css')
 </head>
 <body class="font-figtree antialiased text-zinc-900 scroll-smooth bg-orange-300">
