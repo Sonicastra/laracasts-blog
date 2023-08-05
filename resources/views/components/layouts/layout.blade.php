@@ -17,7 +17,7 @@
 
     @vite('resources/css/app.css')
 </head>
-<body class="font-figtree antialiased text-zinc-900 scroll-smooth bg-orange-300">
+<body class="font-figtree antialiased text-zinc-900 scroll-smooth bg-orange-100">
 <main class="p-10">
     <section class="px-6 py-8">
         <x-base.navigation/>
