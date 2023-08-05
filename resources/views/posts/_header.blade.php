@@ -1,18 +1,18 @@
 <header class="max-w-xl mx-auto mt-20 text-center">
-    <h1 class="text-4xl">
+    <h1 class="text-4xl text-amber-800">
         Latest <span
                 class="bg-clip-text text-transparent underline decoration-amber-500 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500">Funko Blog</span>
         News
     </h1>
 
-    <div class="sm:flex items-center sm:justify-between my-12">
+    <div class="md:flex items-center md:justify-between my-12">
         <!--  Category -->
-        <div class="relative bg-amber-100 rounded-md sm:w-52">
+        <div class="relative bg-amber-100 rounded-md md:w-52">
             <x-category-dropdown/>
         </div>
 
         <!-- Search -->
-        <div class="mt-4 sm:mt-0 sm:w-80">
+        <div class="mt-4 md:mt-0 md:w-80">
             <form method="GET" action="/posts">
                 @if (request('category'))
                     <input type="hidden" name="category" value="{{ request('category') }}">
