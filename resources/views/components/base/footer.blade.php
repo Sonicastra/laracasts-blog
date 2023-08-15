@@ -1,23 +1,30 @@
-<footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
-    <img src="/images/lary-newsletter-icon.svg" alt="" class="mx-auto -mb-6" style="width: 145px;">
+<footer id="newsletter" class="bg-amber-500 rounded-lg text-center text-amber-800 py-16 px-10 mt-16">
     <h5 class="text-3xl">Stay in touch with the latest posts</h5>
-    <p class="text-sm mt-3">Promise to keep the inbox clean. No bugs.</p>
+    <p class="text-amber-800 text-sm">Sign up to our newsletter</p>
 
     <div class="mt-10">
-        <div class="relative inline-block mx-auto lg:bg-gray-200 rounded-full">
+        <div class="relative inline-block mx-auto bg-yellow-400 rounded-full pl-4">
 
-            <form method="POST" action="#" class="lg:flex text-sm">
-                <div class="lg:py-3 lg:px-5 flex items-center">
-                    <label for="email" class="hidden lg:inline-block">
-                        <img src="/images/mailbox-icon.svg" alt="mailbox letter">
+            <form method="POST" action="/newsletter" class="flex text-sm">
+                @csrf
+
+                <div class="flex items-center">
+                    <label for="email" class="flex items-center inline-block">
+                        <i class="fa-solid fa-envelope mr-3"></i>
                     </label>
 
-                    <input id="email" type="text" placeholder="Your email address"
-                           class="lg:bg-transparent py-2 lg:py-0 pl-4 focus-within:outline-none">
+                    <div>
+                        <input id="email" name="email" type="text" placeholder="Your email address"
+                               class="bg-yellow-400 text-amber-800 placeholder-amber-800 placeholder:text-sm focus:bg-tr focus:outline-none focus:ring-0 border-none">
+                    </div>
                 </div>
 
+                @error('email')
+                <small class="text-red-500 mt-1">{{ $message }}</small>
+                @enderror
+
                 <button type="submit"
-                        class="transition-colors duration-300 bg-blue-500 hover:bg-blue-600 mt-4 lg:mt-0 lg:ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
+                        class="transition-colors duration-300 bg-orange-500 hover:bg-orange-600 rounded-full text-xs font-semibold text-amber-800 uppercase py-3 px-8 ml-4"
                 >
                     Subscribe
                 </button>

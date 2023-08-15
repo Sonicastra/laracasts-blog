@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Funko Blog</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,14 +18,13 @@
     @vite('resources/css/app.css')
 </head>
 <body class="font-figtree antialiased text-zinc-900 scroll-smooth bg-orange-100">
-<main class="p-10">
-    <section class="px-6 py-8">
-        <x-base.navigation/>
+<main class="max-w-7xl mx-auto p-10">
 
-        {{ $slot }}
+    <x-base.navigation/>
 
-        <x-base.footer/>
-    </section>
+    {{ $slot }}
+
+    <x-base.footer/>
 
     <x-flash-message key="success"/>
 
